@@ -8,6 +8,7 @@ Conversion-first MVP website untuk cloud kitchen Nola Kitchen.
 - Tailwind CSS
 - Client-side cart
 - WhatsApp checkout
+- GitHub Pages static export
 
 ## Flow order
 Customer → Website → pilih menu → cart → WhatsApp → admin konfirmasi → admin pesan ojol → makanan dikirim.
@@ -18,6 +19,14 @@ npm install
 npm run dev
 ```
 Buka http://localhost:3000
+
+## Deployment GitHub Pages
+Push ke `main` akan menjalankan workflow `.github/workflows/deploy-pages.yml`, melakukan `next build`, lalu mem-publish folder `out/` ke GitHub Pages.
+
+Project site menggunakan base path `/nola-kitchen`, sehingga URL production:
+`https://herayadi.github.io/nola-kitchen/`
+
+Di GitHub Settings → Pages, source harus menggunakan **GitHub Actions**.
 
 ## Yang wajib diganti sebelum production
 Di `components/NolaKitchenPage.tsx`:
@@ -30,21 +39,6 @@ Ganti dengan nomor WhatsApp Nola Kitchen dalam format internasional tanpa `+`.
 Semua menu ada di:
 `data/menu.ts`
 
-## Struktur
-```text
-app/
-  globals.css
-  layout.tsx
-  page.tsx
-components/
-  NolaKitchenPage.tsx
-data/
-  menu.ts
-lib/
-  currency.ts
-  whatsapp.ts
-```
-
 ## Scope versi ini
 Sudah:
 - responsive landing page
@@ -56,6 +50,8 @@ Sudah:
 - checkout WhatsApp otomatis
 - SEO metadata dasar
 - section cara pesan / FAQ / area pengiriman
+- static export untuk GitHub Pages
+- GitHub Actions deployment
 
 Belum:
 - backend/database
