@@ -9,16 +9,13 @@ const config: Config = {
     extend: {
       colors: {
         nola: {
-          cream: "#FFF7EA",
-          sand: "#F2E3CC",
-          brown: "#40261D",
-          red: "#8F2D1E",
-          gold: "#D99C48",
-          green: "#315C44",
+          cream: "#FFF5EC",
+          brown: "#2A1712",
+          red: "#B73A24",
         },
       },
       boxShadow: {
-        soft: "0 20px 60px rgba(64,38,29,.10)",
+        soft: "0 20px 60px rgba(42,23,18,.12)",
       },
     },
   },
