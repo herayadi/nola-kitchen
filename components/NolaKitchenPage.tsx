@@ -6,7 +6,7 @@ import { formatRupiah } from "@/lib/currency";
 import { buildWhatsAppUrl, type CartMap } from "@/lib/whatsapp";
 
 const BUSINESS_NAME = "Nola Kitchen";
-const WHATSAPP_NUMBER = "6281234567890"; // GANTI dengan nomor WhatsApp bisnis
+const WHATSAPP_NUMBER = "6281295656710";
 
 export default function NolaKitchenPage() {
   const [cart, setCart] = useState<CartMap>({});
@@ -115,7 +115,7 @@ export default function NolaKitchenPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-8 -z-10 rounded-full bg-nola-gold/20 blur-3xl" />
+              <div className="absolute -inset-8 -z-10 rounded-full bg-nola-red/15 blur-3xl" />
               <div className="rounded-[2rem] border border-nola-brown/10 bg-white p-5 shadow-soft">
                 <div className="rounded-[1.5rem] bg-nola-red p-6 text-white">
                   <p className="text-sm font-bold uppercase tracking-[.2em] text-white/70">Best Seller</p>
@@ -144,16 +144,16 @@ export default function NolaKitchenPage() {
 
         <section id="paket" className="border-y border-nola-brown/10 bg-white/60">
           <div className="mx-auto grid max-w-6xl gap-4 px-4 py-8 md:grid-cols-3 md:px-6">
-            <div className="rounded-3xl bg-nola-green p-5 text-white">
+            <div className="rounded-3xl bg-nola-brown p-5 text-white">
               <p className="text-sm font-bold text-white/70">Paket praktis</p>
               <p className="mt-1 text-xl font-black">Ayam + nasi</p>
             </div>
-            <div className="rounded-3xl bg-nola-gold p-5 text-nola-brown">
-              <p className="text-sm font-bold text-nola-brown/60">Paket lengkap</p>
+            <div className="rounded-3xl bg-nola-red p-5 text-white">
+              <p className="text-sm font-bold text-white/70">Paket lengkap</p>
               <p className="mt-1 text-xl font-black">Ayam + nasi + minum</p>
             </div>
-            <div className="rounded-3xl bg-nola-brown p-5 text-white">
-              <p className="text-sm font-bold text-white/60">Untuk rame-rame</p>
+            <div className="rounded-3xl border border-nola-brown/10 bg-white p-5 text-nola-brown">
+              <p className="text-sm font-bold text-nola-brown/55">Untuk rame-rame</p>
               <p className="mt-1 text-xl font-black">Bisa tambah banyak item</p>
             </div>
           </div>
@@ -177,9 +177,9 @@ export default function NolaKitchenPage() {
                 className="group rounded-[1.75rem] border border-nola-brown/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <div className="grid h-12 w-12 place-items-center rounded-2xl bg-nola-sand text-xl">🍗</div>
+                  <div className="grid h-12 w-12 place-items-center rounded-2xl bg-nola-red/10 text-xl">🍗</div>
                   {item.badge ? (
-                    <span className="rounded-full bg-nola-gold/15 px-3 py-1 text-xs font-black text-nola-red">
+                    <span className="rounded-full bg-nola-red/10 px-3 py-1 text-xs font-black text-nola-red">
                       {item.badge}
                     </span>
                   ) : null}
@@ -203,7 +203,7 @@ export default function NolaKitchenPage() {
 
         <section id="cara-pesan" className="bg-nola-brown text-white">
           <div className="mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
-            <p className="font-bold uppercase tracking-[.2em] text-nola-gold">Cara Pesan</p>
+            <p className="font-bold uppercase tracking-[.2em] text-nola-cream/70">Cara Pesan</p>
             <h2 className="mt-2 text-4xl font-black">3 langkah, beres.</h2>
             <div className="mt-10 grid gap-4 md:grid-cols-3">
               {[
@@ -212,7 +212,7 @@ export default function NolaKitchenPage() {
                 ["03", "Admin pesan ojol", "Setelah pembayaran dan order dikonfirmasi, admin memesan ojol untuk mengantar makanan ke customer."],
               ].map(([number, title, description]) => (
                 <div key={number} className="rounded-3xl bg-white/5 p-6">
-                  <span className="text-3xl font-black text-nola-gold">{number}</span>
+                  <span className="text-3xl font-black text-nola-cream">{number}</span>
                   <h3 className="mt-5 text-xl font-black">{title}</h3>
                   <p className="mt-2 text-white/65">{description}</p>
                 </div>
@@ -351,12 +351,12 @@ export default function NolaKitchenPage() {
               <button
                 onClick={checkout}
                 disabled={!count}
-                className="w-full rounded-2xl bg-nola-green px-5 py-4 font-black text-white disabled:cursor-not-allowed disabled:opacity-40"
+                className="w-full rounded-2xl bg-nola-red px-5 py-4 font-black text-white disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Pesan via WhatsApp
               </button>
               <p className="mt-3 text-center text-xs text-nola-brown/45">
-                Nomor WhatsApp masih placeholder dan harus diganti sebelum publish.
+                Pesanan akan dikirim ke WhatsApp Nola Kitchen untuk dikonfirmasi admin.
               </p>
             </div>
           </aside>
