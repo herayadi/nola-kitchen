@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff7ea;
+  color: #40261d;
+}
+
+.grain {
+  background-image: radial-gradient(rgba(64, 38, 29, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
